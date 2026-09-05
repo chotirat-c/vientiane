@@ -1,0 +1,74 @@
+{
+  "source": "Mapzen Terrain Tiles (Terrarium), AWS elevation-tiles-prod",
+  "source_url_template": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/{z}/{x}/{y}.png",
+  "format_documentation": "https://github.com/tilezen/joerd/blob/master/docs/formats.md",
+  "source_registry": "https://registry.opendata.aws/terrain-tiles/",
+  "accessed": "2026-09-05",
+  "zoom": 11,
+  "downloaded_tiles": 832,
+  "downloaded_bytes": 50432893,
+  "source_native_resolution_projected_webmercator_m": 76.43702828517625,
+  "source_native_resolution_ground_m_at_south_north": [
+    74.19558136523163,
+    70.61722949301357
+  ],
+  "source_elevation_decoding": "R*256 + G + B/256 - 32768 metres; decode before interpolation",
+  "source_tile_sample_convention": "pixel centers; column increases east, row increases south",
+  "source_country_sample_count": 44021134,
+  "source_outlier_corrections": 817,
+  "source_outlier_method": "Selective 5x5 median replacement only where local deviation exceeds 250 m or source is outside 0..3100 m; removes sparse obvious source spikes/pits without smoothing the general surface.",
+  "source_country_min_elevation_m": 0.0,
+  "source_country_max_elevation_m": 2823.0,
+  "source_mosaic_file": "source_zoom11.npy",
+  "source_mosaic_shape": [
+    13568,
+    11264
+  ],
+  "source_tile_bbox_xy_inclusive": [
+    1593,
+    892,
+    1636,
+    944
+  ],
+  "boundary": "Existing geoBoundaries gbOpen LAO ADM0, historical boundary dataset (2017 as recorded by parent workflow); display outline, not a boundary authority",
+  "boundary_source": "https://www.geoboundaries.org/api/current/gbOpen/LAO/ADM0/",
+  "geographic_bounds_wsen": [
+    100.08432470000004,
+    13.909675200000027,
+    107.63499890000003,
+    22.502696
+  ],
+  "projection": "EPSG:32648 (WGS 84 / UTM zone 48N)",
+  "grid_spacing_m": 150.0,
+  "shape_hw": [
+    6366,
+    5316
+  ],
+  "valid_vertices": 10216769,
+  "min_elevation_m": 11.64482593536377,
+  "max_elevation_m": 2814.6845703125,
+  "negative_in_country_count": 0,
+  "missing_in_country_count": 0,
+  "x_m": "1D increasing easting in meters; corresponds to columns; samples are vertices",
+  "y_m": "1D DECREASING northing in meters; corresponds to rows; row 0 is north",
+  "elevation_m": "2D float32; bilinear source interpolation after decoding; no vertical exaggeration and no artificial noise",
+  "mask": "2D bool; true where the grid point lies inside the country; outside-country elevations retained where source coverage exists, otherwise zero",
+  "grid_extent_xmin_ymin_xmax_ymax": [
+    -13950.0,
+    1537650.0,
+    783300.0,
+    2492400.0
+  ],
+  "elapsed_seconds": 84.5619999999999,
+  "detail_texture": {
+    "filename": "dem_detail_75m.png",
+    "shape_hw": [
+      12731,
+      10631
+    ],
+    "grid_spacing_m": 75.0,
+    "encoding": "uint16 PNG normalized [0,65535] maps to [0,3200] metres; load as Non-Color",
+    "orientation": "row0 north, col0 west; same first/last grid coordinate extent as mesh",
+    "blender_uv": "u=(x-x_min)/(x_max-x_min); v=(y-y_min)/(y_max-y_min); no y inversion for ordinary Blender image textures"
+  }
+}

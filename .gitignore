@@ -1,0 +1,18 @@
+# Local runtimes, caches, and downloaded tile intermediates
+work/uv-cache/
+work/uv-python/
+work/uv-python-installs/
+work/uv-runtime/
+work/uv-tools/
+work/dem_tiles/
+work/terrain_v2/deps/
+work/terrain_v2/tiles_z11/
+work/terrain_v2/__pycache__/
+work/terrain_v2/*.log
+work/terrain_v2/source_zoom11.npy
+work/terrain_v2/dem_mesh.npz
+work/terrain_v2/dem_detail_75m.png
+work/terrain_v2/*.png
+
+# Blender autosave backups
+outputs/*.blend1

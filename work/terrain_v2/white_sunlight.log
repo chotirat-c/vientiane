@@ -1,0 +1,19 @@
+00:01.719  blend            | Read blend: "C:\Users\mikasaloli\Documents\Codex\2026-09-05\ho\outputs\laos_relief_bright_morning_8k.blend"
+00:02.766  cycles           | WARNING CUEW initialization failed: Error opening the library
+00:29.375  render           | Saved: 'C:\Users\mikasaloli\Documents\Codex\2026-09-05\ho\outputs\laos_relief_white_sunlight_preview.png'
+BlenderMCP: cannot start server in background mode (blender -b) - commands would never execute
+BlenderMCP: run Blender with a GUI, or use a virtual display: xvfb-run -a blender
+BlenderMCP addon registered
+Info: Packed 1 file(s)
+Info: Saved as "laos_relief_white_sunlight_8k.blend"
+BACKGROUND_RGB 25 25 [255, 255, 255]
+BACKGROUND_RGB 25 2023 [255, 255, 255]
+BACKGROUND_RGB 1651 2023 [255, 255, 255]
+BACKGROUND_RGB 1651 25 [255, 255, 255]
+BACKGROUND_RGB 838 2023 [255, 255, 255]
+WHITE_SUNLIGHT_PREVIEW_COMPLETE
+BlenderMCP server stopped
+BlenderMCP addon unregistered
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

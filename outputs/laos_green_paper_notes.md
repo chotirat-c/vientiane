@@ -14,6 +14,6 @@ A separate warm-white cotton-paper sheet sits on a neutral tabletop. Its visible
 
 ## Technical details and sources
 
-The 150-metre projected grid, 10.2-million-vertex terrain, underlying elevation data and source-artifact corrections are unchanged from the blue rebuilt edition. See `laos_relief_README.md` for full data provenance and limitations. Rendering uses Cycles HIP, up to 1,024 adaptive samples, 0.005 noise threshold and OpenImageDenoise.
+The 150-metre projected grid, 10.2-million-vertex terrain, underlying elevation data and source-artifact corrections are unchanged from the blue rebuilt edition. See the repository `README.md` for the complete workflow, data provenance and limitations. Rendering uses Cycles HIP, up to 1,024 adaptive samples, 0.005 noise threshold and OpenImageDenoise.
 
 Elevation: [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/). Outline: [geoBoundaries gbOpen LAO ADM0](https://www.geoboundaries.org/api/current/gbOpen/LAO/ADM0/), with underlying OpenStreetMap/Wambacher attribution as recorded in the original notes. This is an artistic relief map, not a survey or authoritative border reference.

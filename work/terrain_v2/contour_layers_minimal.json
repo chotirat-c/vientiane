@@ -1,0 +1,64 @@
+{
+  "layers": [
+    {
+      "level_m": 0,
+      "islands": 1,
+      "holes": 0,
+      "vertices": 3809,
+      "triangles": 3807
+    },
+    {
+      "level_m": 100,
+      "islands": 1,
+      "holes": 0,
+      "vertices": 1192,
+      "triangles": 1190
+    },
+    {
+      "level_m": 200,
+      "islands": 1,
+      "holes": 0,
+      "vertices": 1021,
+      "triangles": 1019
+    },
+    {
+      "level_m": 400,
+      "islands": 1,
+      "holes": 0,
+      "vertices": 958,
+      "triangles": 956
+    },
+    {
+      "level_m": 600,
+      "islands": 3,
+      "holes": 0,
+      "vertices": 700,
+      "triangles": 694
+    },
+    {
+      "level_m": 800,
+      "islands": 4,
+      "holes": 0,
+      "vertices": 424,
+      "triangles": 416
+    },
+    {
+      "level_m": 1000,
+      "islands": 3,
+      "holes": 0,
+      "vertices": 126,
+      "triangles": 120
+    }
+  ],
+  "contour_interval_m": 200,
+  "smoothing_sigma_m": 18000,
+  "simplification_m": 700,
+  "minimum_island_area_m2": 1000000000.0,
+  "minimum_hole_area_m2": 1e+30,
+  "all_enclosed_holes_filled": true,
+  "pin_xy": [
+    -1.3533364250580096,
+    -0.2592945496651321
+  ],
+  "source": "Existing Laos Mapzen DEM, EPSG:32648; generalized for layered sculpture."
+}

@@ -1,0 +1,151 @@
+{
+  "layers": [
+    {
+      "level_m": 0,
+      "islands": 1,
+      "vertices": 3809,
+      "triangles": 3807
+    },
+    {
+      "level_m": 100,
+      "islands": 3,
+      "vertices": 3899,
+      "triangles": 3897
+    },
+    {
+      "level_m": 200,
+      "islands": 15,
+      "vertices": 4559,
+      "triangles": 4565
+    },
+    {
+      "level_m": 300,
+      "islands": 42,
+      "vertices": 4985,
+      "triangles": 4947
+    },
+    {
+      "level_m": 400,
+      "islands": 44,
+      "vertices": 5314,
+      "triangles": 5318
+    },
+    {
+      "level_m": 500,
+      "islands": 64,
+      "vertices": 5872,
+      "triangles": 5824
+    },
+    {
+      "level_m": 600,
+      "islands": 75,
+      "vertices": 6666,
+      "triangles": 6628
+    },
+    {
+      "level_m": 700,
+      "islands": 105,
+      "vertices": 7392,
+      "triangles": 7282
+    },
+    {
+      "level_m": 800,
+      "islands": 122,
+      "vertices": 7476,
+      "triangles": 7294
+    },
+    {
+      "level_m": 900,
+      "islands": 140,
+      "vertices": 7106,
+      "triangles": 6848
+    },
+    {
+      "level_m": 1000,
+      "islands": 151,
+      "vertices": 6152,
+      "triangles": 5868
+    },
+    {
+      "level_m": 1100,
+      "islands": 148,
+      "vertices": 4924,
+      "triangles": 4638
+    },
+    {
+      "level_m": 1200,
+      "islands": 129,
+      "vertices": 3695,
+      "triangles": 3437
+    },
+    {
+      "level_m": 1300,
+      "islands": 116,
+      "vertices": 2560,
+      "triangles": 2328
+    },
+    {
+      "level_m": 1400,
+      "islands": 91,
+      "vertices": 1583,
+      "triangles": 1403
+    },
+    {
+      "level_m": 1500,
+      "islands": 61,
+      "vertices": 869,
+      "triangles": 747
+    },
+    {
+      "level_m": 1600,
+      "islands": 34,
+      "vertices": 455,
+      "triangles": 389
+    },
+    {
+      "level_m": 1700,
+      "islands": 14,
+      "vertices": 200,
+      "triangles": 172
+    },
+    {
+      "level_m": 1800,
+      "islands": 10,
+      "vertices": 149,
+      "triangles": 129
+    },
+    {
+      "level_m": 1900,
+      "islands": 6,
+      "vertices": 90,
+      "triangles": 78
+    },
+    {
+      "level_m": 2000,
+      "islands": 6,
+      "vertices": 60,
+      "triangles": 48
+    },
+    {
+      "level_m": 2100,
+      "islands": 3,
+      "vertices": 28,
+      "triangles": 22
+    },
+    {
+      "level_m": 2200,
+      "islands": 2,
+      "vertices": 16,
+      "triangles": 12
+    }
+  ],
+  "contour_interval_m": 100,
+  "smoothing_sigma_m": 1500,
+  "simplification_m": 180,
+  "minimum_island_area_m2": 1000000.0,
+  "pin_xy": [
+    -1.3533364250580096,
+    -0.2592945496651321
+  ],
+  "source": "Existing Laos Mapzen DEM, EPSG:32648; generalized for layered sculpture."
+}

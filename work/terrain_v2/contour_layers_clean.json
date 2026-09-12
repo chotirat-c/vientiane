@@ -1,0 +1,116 @@
+{
+  "layers": [
+    {
+      "level_m": 0,
+      "islands": 1,
+      "vertices": 3809,
+      "triangles": 3807
+    },
+    {
+      "level_m": 100,
+      "islands": 1,
+      "vertices": 1661,
+      "triangles": 1659
+    },
+    {
+      "level_m": 200,
+      "islands": 5,
+      "vertices": 1622,
+      "triangles": 1614
+    },
+    {
+      "level_m": 300,
+      "islands": 5,
+      "vertices": 1578,
+      "triangles": 1570
+    },
+    {
+      "level_m": 400,
+      "islands": 5,
+      "vertices": 1523,
+      "triangles": 1515
+    },
+    {
+      "level_m": 500,
+      "islands": 4,
+      "vertices": 1484,
+      "triangles": 1482
+    },
+    {
+      "level_m": 600,
+      "islands": 11,
+      "vertices": 1451,
+      "triangles": 1437
+    },
+    {
+      "level_m": 700,
+      "islands": 13,
+      "vertices": 1432,
+      "triangles": 1418
+    },
+    {
+      "level_m": 800,
+      "islands": 10,
+      "vertices": 1357,
+      "triangles": 1351
+    },
+    {
+      "level_m": 900,
+      "islands": 20,
+      "vertices": 1174,
+      "triangles": 1140
+    },
+    {
+      "level_m": 1000,
+      "islands": 21,
+      "vertices": 961,
+      "triangles": 919
+    },
+    {
+      "level_m": 1100,
+      "islands": 18,
+      "vertices": 600,
+      "triangles": 564
+    },
+    {
+      "level_m": 1200,
+      "islands": 17,
+      "vertices": 378,
+      "triangles": 344
+    },
+    {
+      "level_m": 1300,
+      "islands": 12,
+      "vertices": 186,
+      "triangles": 162
+    },
+    {
+      "level_m": 1400,
+      "islands": 6,
+      "vertices": 73,
+      "triangles": 61
+    },
+    {
+      "level_m": 1500,
+      "islands": 3,
+      "vertices": 36,
+      "triangles": 30
+    },
+    {
+      "level_m": 1600,
+      "islands": 1,
+      "vertices": 13,
+      "triangles": 11
+    }
+  ],
+  "contour_interval_m": 100,
+  "smoothing_sigma_m": 6000,
+  "simplification_m": 500,
+  "minimum_island_area_m2": 50000000.0,
+  "minimum_hole_area_m2": 20000000.0,
+  "pin_xy": [
+    -1.3533364250580096,
+    -0.2592945496651321
+  ],
+  "source": "Existing Laos Mapzen DEM, EPSG:32648; generalized for layered sculpture."
+}

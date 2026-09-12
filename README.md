@@ -2,10 +2,25 @@
 
 Create a Laos relief map from real boundary and elevation data, then build and render it in Blender.
 
-![White sunlight preview](outputs/laos_relief_white_sunlight_preview.png)
+![White sunlight preview](outputs/laos/white-sunlight/laos_relief_white_sunlight_preview.png)
 
 1. [Geo boundary and elevation](#part-1--geo-boundary-and-elevation)
 2. [Blender build and render](#part-2--blender-build-and-render)
+
+## Output organization
+
+Rendered assets are grouped first by region, then by visual version:
+
+```text
+outputs/
+└── laos/
+    ├── blue/
+    ├── green-paper/
+    ├── white-sunlight/
+    └── sandy-gold-terraces/
+```
+
+Shared geographic inputs and build scripts remain under `work/` because all four versions use them.
 
 For a quick review of an existing scene, do **1.1**, **2.1** and **2.2** only. Run all commands in the same Windows PowerShell session from the repository root. Stop when a check fails.
 
@@ -154,7 +169,7 @@ The compositor scripts use Blender 5.2 APIs. Verify compatibility before using a
 This makes a separate 1,676 × 2,048 CPU preview without saving changes to the scene.
 
 ```powershell
-$Scene = Join-Path $ProjectRoot 'outputs/laos_relief_white_sunlight_8k.blend'
+$Scene = Join-Path $ProjectRoot 'outputs/laos/white-sunlight/laos_relief_white_sunlight_8k.blend'
 if (!(Test-Path $Scene)) { throw 'Selected scene is missing.' }
 if ((Get-Item $Scene).Length -lt 1MB) { throw 'Scene is unexpectedly small; check Git LFS.' }
 
@@ -200,7 +215,7 @@ foreach ($Font in @('C:\Windows\Fonts\segoeui.ttf', 'C:\Windows\Fonts\LeelawUI.t
 if ($LASTEXITCODE -ne 0) { throw 'Proof render failed.' }
 ```
 
-Inspect `work/terrain_v2/proof.png` at 1,676 × 2,048. For the green-paper edition, use `--style green-paper` and inspect `proof_green_paper.png`. A proof does not save a `.blend` file.
+Inspect `outputs/laos/blue/proof.png` at 1,676 × 2,048. For the green-paper edition, use `--style green-paper` and inspect `outputs/laos/green-paper/proof.png`. A proof does not save a `.blend` file.
 
 ### 2.4 Render and verify the final
 
@@ -214,19 +229,19 @@ if ($LASTEXITCODE -ne 0) { throw 'Final build or render failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Final image verification failed.' }
 ```
 
-For green paper, change both commands to `--style green-paper`. The QA script checks the PNG and creates separate viewing copies without changing the master.
+For green paper, change both commands to `--style green-paper`. The QA script checks the PNG and creates separate viewing copies in the selected version folder without changing the master.
 
 Confirm the actual files, dimensions and bit depth, then visually inspect the full composition and 1:1 crops. Report clearly whether you produced a preview or a completed final render. An `_8k.blend` filename alone is not proof of an 8K render.
 
 | Blue deliverable | Description |
 | --- | --- |
-| `outputs/laos_relief_rebuilt_8k.png` | 6,284 × 7,680, 16-bit RGB PNG |
-| `outputs/laos_relief_rebuilt_8k.blend` | Editable Blender 5.2 scene with packed fonts |
+| `outputs/laos/blue/laos_relief_rebuilt_8k.png` | 6,284 × 7,680, 16-bit RGB PNG |
+| `outputs/laos/blue/laos_relief_rebuilt_8k.blend` | Editable Blender 5.2 scene with packed fonts |
 
 The final terrain uses a 150 m projected grid, about 10.2 million vertices, upward normals, 14× vertical exaggeration and no invented surface noise. Cycles HIP uses adaptive sampling up to 1,024 samples and OpenImageDenoise. The color ramp represents elevation, not provinces or vegetation.
 
 ### Optional style variants
 
-- White sunlight: run `bright_morning.py` on `laos_relief_rebuilt_8k.blend`, then run `white_sunlight.py` on the generated `laos_relief_bright_morning_8k.blend`. Both scripts save scenes and render previews. They require the Phetsarath font at the hardcoded local path.
+- White sunlight: run `bright_morning.py` on `outputs/laos/blue/laos_relief_rebuilt_8k.blend`, then run `white_sunlight.py` on the generated `outputs/laos/white-sunlight/laos_relief_bright_morning_8k.blend`. Both scripts save scenes and render previews in `outputs/laos/white-sunlight/`. They require the Phetsarath font at the hardcoded local path.
 - Sandy-gold terraces: the contour scripts, generated scenes and tutorial `.blend` are local and currently untracked. A fresh clone cannot reproduce this route without those inputs; do not guess missing paths or download URLs.
 - Another country: update the height range, palette, legend, camera, labels, fonts, QA crops and filenames together. Build a simple geographic proof before developing the final art direction.

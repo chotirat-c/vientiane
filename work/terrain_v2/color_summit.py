@@ -3,6 +3,8 @@ import bpy
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
+OUT=ROOT/'outputs'/'laos'/'sandy-gold-terraces'
+OUT.mkdir(parents=True,exist_ok=True)
 s=bpy.context.scene
 layers=[o for o in s.objects if 'contour_elevation_m' in o]
 top=max(o['contour_elevation_m'] for o in layers)
@@ -39,10 +41,10 @@ prefs=bpy.context.preferences.addons['cycles'].preferences
 prefs.compute_device_type='HIP';prefs.refresh_devices()
 for device in prefs.devices: device.use=device.type=='HIP'
 s.cycles.device='GPU'
-s.render.filepath=str(ROOT/'outputs/laos_relief_contour_blue_summit_8k.png')
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'outputs/laos_relief_contour_blue_summit_8k.blend'),compress=True)
+s.render.filepath=str(OUT/'laos_relief_contour_blue_summit_8k.png')
+bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'laos_relief_contour_blue_summit_8k.blend'),compress=True)
 s.render.resolution_x=1676;s.render.resolution_y=2048
 s.cycles.samples=96;s.cycles.adaptive_min_samples=16;s.cycles.adaptive_threshold=.02
 s.render.image_settings.color_depth='8'
-s.render.filepath=str(ROOT/'outputs/laos_relief_contour_blue_summit_preview.png')
+s.render.filepath=str(OUT/'laos_relief_contour_blue_summit_preview.png')
 bpy.ops.render.render(write_still=True)

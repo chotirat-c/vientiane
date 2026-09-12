@@ -9,11 +9,12 @@ import numpy as np
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT.parent.parent / 'outputs'
 p = argparse.ArgumentParser()
 p.add_argument('--stage', choices=['proof', 'final'], default='proof')
 p.add_argument('--style', choices=['blue', 'green-paper'], default='blue')
 args = p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+OUT = ROOT.parent.parent / 'outputs' / 'laos' / args.style
+OUT.mkdir(parents=True, exist_ok=True)
 FINAL = args.stage == 'final'
 SCALE = 1e-5  # one scene unit = 100 km
 EXAG = 14.0
@@ -244,7 +245,7 @@ if FINAL:
     bpy.ops.file.pack_all()
     bpy.ops.wm.save_as_mainfile(filepath=str(OUT/(stem+'.blend')),compress=True)
 else:
-    scene.render.filepath=str(ROOT/('proof_green_paper.png' if args.style == 'green-paper' else 'proof.png'))
+    scene.render.filepath=str(OUT/'proof.png')
 log('Rendering '+args.stage)
 bpy.ops.render.render(write_still=True)
 log('FINISHED '+scene.render.filepath)

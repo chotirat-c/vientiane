@@ -3,6 +3,8 @@ import bpy
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[2]
+out = root/'outputs'/'laos'/'white-sunlight'
+out.mkdir(parents=True, exist_ok=True)
 s = bpy.context.scene
 sun = bpy.data.objects['Northwest raking relief light']
 sun.data.color = (1.0, .80, .57)
@@ -75,8 +77,8 @@ lao.data.size *= old_width / lao.dimensions.x
 lao.visible_shadow = False
 lao['Font revision'] = 'Phetsarath Regular, embedded; original line width preserved.'
 bpy.ops.file.pack_all()
-s.render.filepath = str(root/'outputs/laos_relief_white_sunlight_8k.png')
-bpy.ops.wm.save_as_mainfile(filepath=str(root/'outputs/laos_relief_white_sunlight_8k.blend'), compress=True)
+s.render.filepath = str(out/'laos_relief_white_sunlight_8k.png')
+bpy.ops.wm.save_as_mainfile(filepath=str(out/'laos_relief_white_sunlight_8k.blend'), compress=True)
 s.render.resolution_x = 1676
 s.render.resolution_y = 2048
 s.render.resolution_percentage = 100
@@ -85,7 +87,7 @@ s.cycles.adaptive_min_samples = 16
 s.cycles.adaptive_threshold = .015
 s.render.image_settings.file_format = 'PNG'
 s.render.image_settings.color_depth = '8'
-s.render.filepath = str(root/'outputs/laos_relief_white_sunlight_preview.png')
+s.render.filepath = str(out/'laos_relief_white_sunlight_preview.png')
 bpy.ops.render.render(write_still=True)
 im = bpy.data.images.load(s.render.filepath, check_existing=False)
 im.colorspace_settings.name = 'Non-Color'

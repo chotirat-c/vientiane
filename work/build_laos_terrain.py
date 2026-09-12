@@ -5,8 +5,9 @@ import os
 from mathutils import Vector
 
 
-DATA_PATH = r"C:\Users\mikasaloli\Documents\Codex\2026-09-05\ho\work\laos_dem_grid.json"
-OUTPUT_DIR = r"C:\Users\mikasaloli\Documents\Codex\2026-09-05\ho\outputs"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(PROJECT_ROOT, "work", "laos_dem_grid.json")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "outputs", "laos", "blue")
 BLEND_PATH = os.path.join(OUTPUT_DIR, "laos_elevation_terrain_8k.blend")
 RENDER_PATH = os.path.join(OUTPUT_DIR, "laos_elevation_terrain_8k.png")
 

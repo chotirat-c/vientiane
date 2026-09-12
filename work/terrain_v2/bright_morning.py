@@ -4,6 +4,8 @@ from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT/'outputs'/'laos'/'white-sunlight'
+OUT.mkdir(parents=True, exist_ok=True)
 scene = bpy.context.scene
 ground = bpy.data.objects['Matte studio ground'].data.materials[0]
 ground.name = 'Clean white morning backdrop'
@@ -44,8 +46,8 @@ prefs.refresh_devices()
 for device in prefs.devices:
     device.use = device.type == 'HIP'
 scene.cycles.device = 'GPU'
-scene.render.filepath = str(ROOT/'outputs/laos_relief_bright_morning_8k.png')
-bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'outputs/laos_relief_bright_morning_8k.blend'), compress=True)
+scene.render.filepath = str(OUT/'laos_relief_bright_morning_8k.png')
+bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'laos_relief_bright_morning_8k.blend'), compress=True)
 
 scene.render.resolution_x = 1676
 scene.render.resolution_y = 2048
@@ -55,6 +57,6 @@ scene.cycles.adaptive_min_samples = 16
 scene.cycles.adaptive_threshold = .015
 scene.render.image_settings.file_format = 'PNG'
 scene.render.image_settings.color_depth = '8'
-scene.render.filepath = str(ROOT/'outputs/laos_relief_bright_morning_preview.png')
+scene.render.filepath = str(OUT/'laos_relief_bright_morning_preview.png')
 bpy.ops.render.render(write_still=True)
 print('MORNING_PROOF_COMPLETE', flush=True)

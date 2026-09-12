@@ -16,4 +16,4 @@ work/terrain_v2/dem_detail_75m.png
 work/terrain_v2/*.png
 
 # Blender autosave backups
-outputs/*.blend1
+outputs/**/*.blend1

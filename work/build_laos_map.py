@@ -5,8 +5,9 @@ import os
 from mathutils import Vector
 
 
-GEOJSON_PATH = r"C:\Users\mikasaloli\Documents\Codex\2026-09-05\ho\work\laos_adm1.geojson"
-OUTPUT_DIR = r"C:\Users\mikasaloli\Documents\Codex\2026-09-05\ho\outputs"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+GEOJSON_PATH = os.path.join(PROJECT_ROOT, "work", "laos_adm1.geojson")
+OUTPUT_DIR = os.path.join(PROJECT_ROOT, "outputs", "laos", "blue")
 BLEND_PATH = os.path.join(OUTPUT_DIR, "laos_adm1_colored_map.blend")
 RENDER_PATH = os.path.join(OUTPUT_DIR, "laos_adm1_colored_map.png")
 

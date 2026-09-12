@@ -3,7 +3,8 @@ import bpy,json,numpy as np,sys,argparse
 from pathlib import Path
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parent
-OUT=ROOT.parents[1]/'outputs'
+OUT=ROOT.parents[1]/'outputs'/'laos'/'sandy-gold-terraces'
+OUT.mkdir(parents=True,exist_ok=True)
 scene=bpy.context.scene
 parser=argparse.ArgumentParser()
 parser.add_argument('--clean',action='store_true')

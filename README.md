@@ -13,10 +13,12 @@ Rendered assets are grouped first by region, then by visual version:
 
 ```text
 outputs/
-└── laos/
-    ├── blue/
-    ├── green-paper/
-    ├── white-sunlight/
+├── laos/
+│   ├── blue/
+│   ├── green-paper/
+│   ├── white-sunlight/
+│   └── sandy-gold-terraces/
+└── thailand/
     └── sandy-gold-terraces/
 ```
 
@@ -245,3 +247,33 @@ The final terrain uses a 150 m projected grid, about 10.2 million vertices, upwa
 - White sunlight: run `bright_morning.py` on `outputs/laos/blue/laos_relief_rebuilt_8k.blend`, then run `white_sunlight.py` on the generated `outputs/laos/white-sunlight/laos_relief_bright_morning_8k.blend`. Both scripts save scenes and render previews in `outputs/laos/white-sunlight/`. They require the Phetsarath font at the hardcoded local path.
 - Sandy-gold terraces: the contour scripts, generated scenes and tutorial `.blend` are local and currently untracked. A fresh clone cannot reproduce this route without those inputs; do not guess missing paths or download URLs.
 - Another country: update the height range, palette, legend, camera, labels, fonts, QA crops and filenames together. Build a simple geographic proof before developing the final art direction.
+
+## Thailand sandy-gold terraces
+
+This edition keeps the Laos sculpture's turquoise, pearl and sandy-gold art
+direction while rebuilding the geography, capital pin, Thai title and camera for
+Thailand. Its source files are isolated under `work/thailand_terrain/` so the
+Laos data cannot be overwritten.
+
+```powershell
+$Python = 'C:\Users\mikasaloli\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
+$Blender = 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe'
+
+& $Python .\work\thailand_terrain\prepare_thailand_contours.py
+if ($LASTEXITCODE -ne 0) { throw 'Thailand contour preparation failed.' }
+
+& $Blender --background --disable-autoexec `
+    .\outputs\laos\sandy-gold-terraces\laos_relief_contour_sandy_gold_8k.blend `
+    --python-exit-code 1 --python .\work\thailand_terrain\build_thailand_sandy_gold.py
+if ($LASTEXITCODE -ne 0) { throw 'Thailand proof render failed.' }
+```
+
+The checked proof is
+`outputs/thailand/sandy-gold-terraces/thailand_relief_contour_sandy_gold_preview.png`
+at 1,676 × 2,048. The editable
+`thailand_relief_contour_sandy_gold_8k.blend` reopens configured for a 6,284 ×
+7,680, 16-bit final render; the final PNG is not produced by the proof command.
+
+The geometry uses geoBoundaries gbOpen THA ADM0 (2017 representation, ODbL 1.0)
+and Mapzen Terrarium elevation tiles. It is a generalized artistic relief, not a
+survey, navigation product or authoritative border statement.

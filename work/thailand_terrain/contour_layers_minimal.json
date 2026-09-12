@@ -1,0 +1,131 @@
+{
+  "country": "Thailand",
+  "country_iso3": "THA",
+  "capital": "Bangkok",
+  "capital_lon_lat": [
+    100.5018,
+    13.7563
+  ],
+  "pin_xy": [
+    -0.6423305032727402,
+    0.47607175922940626
+  ],
+  "projection": "EPSG:32647 (WGS 84 / UTM zone 47N)",
+  "grid_spacing_m": 600.0,
+  "smoothing_sigma_m": 18000.0,
+  "simplification_m": 750.0,
+  "minimum_island_area_m2": 20000000.0,
+  "minimum_terrace_area_m2": 35000000.0,
+  "minimum_hole_area_m2": 1e+30,
+  "blender_xy_scale_per_m": 6e-06,
+  "layers": [
+    {
+      "level_m": 0,
+      "islands": 17,
+      "holes": 0,
+      "vertices": 2204,
+      "triangles": 2170
+    },
+    {
+      "level_m": 100,
+      "islands": 3,
+      "holes": 0,
+      "vertices": 758,
+      "triangles": 752
+    },
+    {
+      "level_m": 200,
+      "islands": 13,
+      "holes": 0,
+      "vertices": 682,
+      "triangles": 656
+    },
+    {
+      "level_m": 400,
+      "islands": 4,
+      "holes": 0,
+      "vertices": 428,
+      "triangles": 420
+    },
+    {
+      "level_m": 600,
+      "islands": 5,
+      "holes": 0,
+      "vertices": 266,
+      "triangles": 256
+    },
+    {
+      "level_m": 800,
+      "islands": 5,
+      "holes": 0,
+      "vertices": 135,
+      "triangles": 125
+    },
+    {
+      "level_m": 1000,
+      "islands": 2,
+      "holes": 0,
+      "vertices": 32,
+      "triangles": 28
+    }
+  ],
+  "boundary_bounds_wsen": [
+    97.34380719999997,
+    5.612851,
+    105.636812,
+    20.464833700000035
+  ],
+  "boundary_metadata": {
+    "boundaryID": "THA-ADM0-76911100",
+    "boundaryName": "Thailand",
+    "boundaryISO": "THA",
+    "boundaryYearRepresented": "2017",
+    "boundaryType": "ADM0",
+    "boundaryCanonical": "Unknown",
+    "boundarySource": "OpenStreetMap, Wambacher",
+    "boundaryLicense": "Open Data Commons Open Database License 1.0",
+    "licenseDetail": "Open Data Commons Open Database License 1.0",
+    "licenseSource": "www.openstreetmap.org/copyright",
+    "boundarySourceURL": "wambachers-osm.website/boundaries/",
+    "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+    "buildDate": "Dec 12, 2023",
+    "Continent": "Asia",
+    "UNSDG-region": "Eastern and South-Eastern Asia",
+    "UNSDG-subregion": "South-Eastern Asia",
+    "worldBankIncomeGroup": "Upper-middle-income Countries",
+    "admUnitCount": "1",
+    "meanVertices": "93955.0",
+    "minVertices": "93955",
+    "maxVertices": "93955",
+    "meanPerimeterLengthKM": "11103.644289160397",
+    "minPerimeterLengthKM": "11103.644289160397",
+    "maxPerimeterLengthKM": "11103.644289160397",
+    "meanAreaSqKM": "514935.2904599868",
+    "minAreaSqKM": "514935.2904599868",
+    "maxAreaSqKM": "514935.2904599868",
+    "staticDownloadLink": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM0/geoBoundaries-THA-ADM0-all.zip",
+    "gjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM0/geoBoundaries-THA-ADM0.geojson",
+    "tjDownloadURL": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM0/geoBoundaries-THA-ADM0.topojson",
+    "imagePreview": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM0/geoBoundaries-THA-ADM0-PREVIEW.png",
+    "simplifiedGeometryGeoJSON": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/THA/ADM0/geoBoundaries-THA-ADM0_simplified.geojson"
+  },
+  "boundary_sha256": "226eeef03694dc708201f142c992a819798841c0302c89e78cac8579b5058cde",
+  "elevation_source": "Mapzen Terrain Tiles, Terrarium format, AWS elevation-tiles-prod",
+  "elevation_url_template": "https://elevation-tiles-prod.s3.amazonaws.com/terrarium/{z}/{x}/{y}.png",
+  "elevation_accessed": "2026-09-12",
+  "zoom": 9,
+  "downloaded_tiles": 312,
+  "downloaded_bytes": 24285995,
+  "cached_tiles": 312,
+  "raw_country_min_elevation_m": 0.0,
+  "raw_country_max_elevation_m": 2551.98095703125,
+  "source_country_min_before_land_floor_m": -75.09716033935547,
+  "source_country_negative_samples_corrected": 2947,
+  "smoothed_country_min_elevation_m": 0.3282802775155296,
+  "smoothed_country_max_elevation_m": 1054.3760390986604,
+  "source_tile_min_elevation_m": -1342.3515625,
+  "source_tile_max_elevation_m": 2811.0,
+  "source_outlier_corrections": 683263,
+  "elapsed_seconds": 8.469000000000051,
+  "artistic_note": "Generalized relief sculpture; not for survey, navigation, or authoritative borders."
+}

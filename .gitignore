@@ -14,6 +14,9 @@ work/terrain_v2/source_zoom11.npy
 work/terrain_v2/dem_mesh.npz
 work/terrain_v2/dem_detail_75m.png
 work/terrain_v2/*.png
+work/thailand_terrain/tiles_z9/
+work/thailand_terrain/source_zoom9.npy
+work/thailand_terrain/__pycache__/
 
 # Blender autosave backups
 outputs/**/*.blend1

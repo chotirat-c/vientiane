@@ -1,4 +1,23 @@
-# Laos relief map in Blender
+# Laos and Thailand relief maps in Blender
+
+## Morning Jade
+
+The Morning Jade editions pair fresh green terrain with warm sunlight and soft
+blue-gray shadows from the original Sandy Gold atmosphere. Both final renders
+are 6,284 x 7,680, 16-bit RGB PNGs built from the full 150 m terrain grid.
+
+| Country | Full render | Editable scene |
+| --- | --- | --- |
+| Laos | [8K PNG](outputs/laos/morning-jade/laos_relief_morning_jade_8k.png) | [Blender](outputs/laos/morning-jade/laos_relief_morning_jade_8k.blend) |
+| Thailand | [8K PNG](outputs/thailand/morning-jade/thailand_relief_morning_jade_8k.png) | [Blender](outputs/thailand/morning-jade/thailand_relief_morning_jade_8k.blend) |
+
+![Laos Morning Jade](outputs/laos/morning-jade/laos_relief_morning_jade_8k_preview.jpg)
+
+See [Morning Jade build instructions](work/thailand_terrain/MORNING_JADE.md)
+for country selection, preview/final commands, source data, and verification.
+Run `git lfs pull` after cloning to retrieve the packed scenes and renders.
+
+## Original Laos workflow
 
 Create a Laos relief map from real boundary and elevation data, then build and render it in Blender.
 

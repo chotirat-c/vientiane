@@ -1,0 +1,19 @@
+{
+  "country": "Thailand",
+  "country_iso3": "THA",
+  "projection": "EPSG:32647 (WGS 84 / UTM zone 47N)",
+  "grid_spacing_m": 150.0,
+  "source_zoom": 11,
+  "source_web_pixel_m": 76.43702828517625,
+  "source": "Mapzen Terrain Tiles (Terrarium), AWS elevation-tiles-prod",
+  "downloaded_tiles": 1748,
+  "cached_tiles": 1748,
+  "source_outlier_corrections": 0,
+  "center_projected_m": [
+    769421.6816619011,
+    1442027.3459381838
+  ],
+  "min_elevation_m": 0.0,
+  "max_elevation_m": 2567.909912109375,
+  "detail": "Same 150 m terrain-grid resolution as the Laos blue edition; no Gaussian terrain smoothing."
+}
